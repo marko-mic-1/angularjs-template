@@ -17,7 +17,7 @@ inputs:
       description: The port on which the application is listening for requests.
     BuildCommand:
       type: string
-      default: npm run build
+      default: build
       description: Build script for your app
     BuildDirectory:
       type: string

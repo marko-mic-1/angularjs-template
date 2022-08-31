@@ -33,6 +33,8 @@ service:
   "{{AppName}}":
     source: git
     containerPort: "{{Port}}"
+    buildCommand: "{{BuildCommand}}
+    buildDir: "{{BuildDirectory}}"
     autoScaling:
       minReplicas: 1
       maxReplicas: 1

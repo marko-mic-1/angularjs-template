@@ -6,14 +6,7 @@
     "properties": {
         "inputs": {
             "type": "object",
-            "properties": {
-                "buildCmd": {
-                    "type": "string"
-                },
-                "buildDir": {
-                    "type": "string"
-                }
-            },
+            "properties": {},
             "required": []
         }
     },

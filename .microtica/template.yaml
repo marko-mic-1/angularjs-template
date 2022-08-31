@@ -1,7 +1,7 @@
 name: Import an existing app
 description: Import an existing app from your Git repository and deploy it on your Kubernetes cluster.
 logo: https://microtica.s3.eu-central-1.amazonaws.com/assets/templates/logos/import-app.svg
-repo: https://github.com/microtica/templates/tree/master/import-app
+repo: https://github.com/marko-mic-1/angularjs-template
 
 inputs:
   properties:
@@ -15,26 +15,26 @@ inputs:
       type: number
       default: 80
       description: The port on which the application is listening for requests.
-    BuildCommand:
+    buildCmd:
       type: string
       default: build
       description: Build script for your app
-    BuildDirectory:
+    buildDir:
       type: string
       default: build
       description: Build directory
   required:
     - AppName
     - Port
-    - BuildCommand
-    - BuildDirectory
+    - buildCmd
+    - buildDir
 
 service:
   "{{AppName}}":
     source: git
     containerPort: "{{Port}}"
-    buildCommand: "{{BuildCommand}}"
-    buildDir: "{{BuildDirectory}}"
+    buildCmd: "{{buildCmd}}"
+    buildDir: "{{buildDir}}"
     autoScaling:
       minReplicas: 1
       maxReplicas: 1

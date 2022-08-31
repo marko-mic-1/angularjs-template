@@ -8,8 +8,6 @@ steps:
         dockerfile: ./.microtica/Dockerfile
         registry: "{{CONTAINER_REGISTRY_ID}}"
         tag: "{{MIC_PIPELINE_EXECUTION_ID}}"
-        buildCmd: "{{BuildCommand}}"
-        buildDir: "{{BuildDirectory}}"
 
     DeployApplication:
         type: deploy

@@ -15,9 +15,19 @@ inputs:
       type: number
       default: 80
       description: The port on which the application is listening for requests.
+    BuildCommand:
+      type: string
+      default: npm run build
+      description: Build script for your app
+    BuildDirectory:
+      type: string
+      default: build
+      description: Build directory
   required:
     - AppName
     - Port
+    - BuildCommand
+    - BuildDirectory
 
 service:
   "{{AppName}}":

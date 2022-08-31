@@ -18,11 +18,11 @@ inputs:
     BuildCmd:
       type: string
       placeholder: build
-      description: Build script for your app
+      description: Build script for your app (eg. build)
     BuildDir:
       type: string
       placeholder: build
-      description: Build directory
+      description: Build directory (eg. dst)
     AppType:
       type: enum
       enum:

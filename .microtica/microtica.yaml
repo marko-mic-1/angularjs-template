@@ -1,8 +1,16 @@
+stages:
+  - clone
+  - build
+  - push
+  - deploy
+
 steps:
     Clone:
         type: git-clone
+        stage: clone
 
     PushContainerImage:
+        stage: push
         type: docker-push
         image_name: "{{MIC_PIPELINE_NAME}}"
         dockerfile: ./.microtica/Dockerfile
@@ -10,6 +18,7 @@ steps:
         tag: "{{MIC_PIPELINE_EXECUTION_ID}}"
 
     DeployApplication:
+        stage: deploy
         type: deploy
         target: kubernetes
         cluster: "{{CLUSTER_ID}}"

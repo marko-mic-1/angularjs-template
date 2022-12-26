@@ -1,6 +1,5 @@
 stages:
   - clone
-  - build
   - push
   - deploy
 

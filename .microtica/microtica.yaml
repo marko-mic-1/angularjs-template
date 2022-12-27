@@ -25,3 +25,13 @@ steps:
         namespace: "{{CLUSTER_NAMESPACE}}"
         branch_filter: "{{MIC_BRANCH_FILTER}}"
         tag: "{{MIC_PIPELINE_EXECUTION_ID}}"
+        
+    DeployApplication2:
+        stage: deploy
+        type: deploy
+        target: kubernetes
+        cluster: "{{CLUSTER_ID}}"
+        service: "{{SERVICE_NAME}}"
+        namespace: "{{CLUSTER_NAMESPACE}}"
+        branch_filter: "{{MIC_BRANCH_FILTER}}"
+        tag: "{{MIC_PIPELINE_EXECUTION_ID}}"
